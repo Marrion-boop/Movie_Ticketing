@@ -8,7 +8,7 @@
 body {
   height: 100vh;
   width: 100%;
-  background-color: #1f1d24;
+  background-color: #0D0F0A;
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
@@ -23,7 +23,7 @@ body {
 }
 
 .logo {
-  width: 250px;
+  width: 450px;
   cursor: pointer;
 }
 
@@ -92,11 +92,14 @@ button:hover {
   left: 10%; 
 }
 
-/*OVERLAYS (BRUTEFORCE)*/
+/*OVERLAYS*/
+
+
 .overlay-text {
+  width: 250px;
   position: absolute;
   top: 313px; 
-  left: 64px; 
+  left: 150px; 
   transform: translate(-50%, -50%); 
   color: #fff; 
   padding: 10px 20px; 
@@ -117,16 +120,26 @@ button:hover {
   font-size: 13px; 
   text-align: left;
 }
-
-.product-brand {
-  text-transform: uppercase;
-  color: white;
+.Gradient-placeholder {
+  width: 250px;
+  height: 500px;
+  position: absolute;
+  top: 335px; 
+  left: 105px; 
+  transform: translate(-50%, -50%); 
+  color: #fff;
+  padding: 10px 20px; 
+  font-size: 15px; 
+  font-weight: 400;
+  font-family: 'Jost';
+  text-align: left;
+  position: absolute;
+  background: linear-gradient(rgba(255, 255, 255, 0) 0%, #000000 100%);
+  transition: opacity 500ms 0ms ease-in-out;
 }
 
-.price {
-  font-weight: 900;
-  font-size: 20px;
-  color: white;
+.Gradient-placeholder:hover {
+opacity: 0;
 }
 
 
@@ -134,14 +147,14 @@ button:hover {
 .nxt-btn {
   border: none;
   width: 10vw;
-  height: 100%;
+  height: 70%;
   position: absolute;
   top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 90%;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #222121 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #0D0F0A 100%);
   cursor: pointer;
   z-index: 8;
 }
