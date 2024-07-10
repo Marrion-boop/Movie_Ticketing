@@ -78,12 +78,14 @@ button:hover {
   width: 100%;
   height: 350px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .product-thumb {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
 }
 
 .product-timer {
@@ -210,3 +212,178 @@ opacity: 0;
   grid-column: span 2;
   margin-bottom: 10px;
 }
+
+
+/*Seats*/
+.seat{
+  padding:0px;
+  position: relative;
+  left:20px;
+  bottom:0px;
+}
+
+.seat_2{
+  position: relative;
+  left:190px;
+  bottom:303.5px;
+}
+
+
+input[type = "checkbox"]{
+  content:"";
+  appearance: none;
+  background-color: #DADADA;
+  border-radius:20%;
+  padding:15px;
+  margin:2px;
+}
+
+input[type = "checkbox"]:hover{
+  background-color: #B8B8B8;
+}
+
+input[type = "checkbox"]:checked{
+  background-color: #84CA79;
+}
+
+
+
+
+
+/*movies*/
+.movie-preview{
+  position:fixed;
+  top:0; left:0;
+  min-height: 100vh;
+  width: 100%;
+  background:rgba(0, 0, 0, .8);
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.movie-preview .preview{
+  display:none;
+  padding:3rem;
+  background: #fff;
+  position: absolute;
+  margin: 2rem;
+  width:55rem;
+  height:30rem;
+}
+
+.movie-preview .preview select{
+  font-size: 1em;
+  padding: 7px;
+  border-radius: 17px;
+  border: #DADADA;
+  border-width: 10px;
+  background: #DADADA;
+  font-size: 15px; 
+  font-weight: 400;
+  font-family: 'Jost';
+}
+
+.movie-preview .preview .room_select{
+
+  position:relative;
+  padding:10px;
+  left:15px;
+  bottom:0px;
+}
+
+.movie-preview .preview.active{
+  display:inline-block;
+}
+
+
+.movie-preview .preview .preview_img_container{
+  position: relative;
+  
+  height:480px;
+  width:250px;
+  border-radius: 17px;
+  background-color: #000000;
+}
+
+.movie-preview .preview .preview_img_container .preview_gradient{
+  height: 350px;
+  width:250px;
+  top:90px;
+  background: linear-gradient(rgba(255, 255, 255, 0) 0%, #000000 70%);
+  position:absolute;
+}
+
+
+.movie-preview .preview .preview_img_container img{
+  position: relative;
+  height:350px;
+  width:250px;
+  border-radius: 17px;
+  display:inline-block;
+}
+
+.movie-preview .preview .form_container{
+  position: relative;
+  padding: 10px;
+  left:270px;
+  bottom: 480px;
+  height:460px;
+  width:590px;
+  background-color: #0D0F0A;
+  border-radius: 17px;
+}
+
+.movie-preview .preview .form_container .screen_container{
+  position:relative;
+  left:9px;
+  margin:12px;
+  height:70px;
+  width:315px;
+  background-color: #BDCCFF;
+  border-radius: 17px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 15px; 
+  font-weight: 400;
+  font-family: 'Jost';
+}
+
+.movie-preview .preview .form_container .dash_line{
+  width:2px;
+  height:480px;
+  position: absolute;
+  top:0px;
+  left:370px;
+  border-right:1px dashed #8c8b8b;
+  font-size: 15px; 
+  font-weight: 400;
+  font-family: 'Jost';
+}
+
+.movie-preview .preview .form_container .ticket_container{
+  position:absolute;
+  top:27px;
+  left:415px;
+  font-size: 15px; 
+  font-weight: 200;
+  font-family: 'Jost';
+  color:#ffffff;
+}
+
+.movie-preview .preview .form_container .ticket_container hr{
+  width:180px;
+  position: relative;
+  right:22px;
+  margin:5px;
+}
+
+.movie-preview .preview .form_container .ticket_container p{
+  position: relative;
+  margin:15px;
+  right:15px;
+
+}
+
+
+
