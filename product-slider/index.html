@@ -7,8 +7,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Movie Ticketing System</title>
+
 </head>
 
 <body>
@@ -26,8 +28,8 @@
         <button class="nxt-btn"><img src="images/Chevron_right.png" alt=""></button>
         <div class="product-container">
 
-            <div class="product-card">
-                <div class="product-image" data-name = "movie-1">
+            <div class="product_card"  movieName = "movie-1">
+                <div class="product-image">
                     <img src="images/frozen2.jpg" class="product-thumb" alt="">
                     <img src="images/schedule.png" class="product-timer" alt="">
                     <h2 class="overlay-text">Frozen 2</h2>
@@ -37,8 +39,8 @@
             </div>
 
 
-            <div class="product-card">
-                <div class="product-image">
+            <div class="product_card" movieName = "movie-2">
+                <div class="product-image" >
                     <img src="images/ReadyPlayerOne.jpg" class="product-thumb" alt="">
                     <img src="images/schedule.png" class="product-timer" alt="">
                     <h2 class="overlay-text">Ready Player One</h2>
@@ -46,7 +48,7 @@
                     <h2 class="Gradient-placeholder"></h2>
                 </div>
             </div>
-            <div class="product-card">
+            <div class="product_card"  movieName = "movie-3">
                 <div class="product-image">
                     <img src="images/KingKong.jpg" class="product-thumb" alt="">
                     <img src="images/schedule.png" class="product-timer" alt="">
@@ -56,7 +58,7 @@
                 </div>
             </div>
             
-            <div class="product-card">
+            <div class="product_card"  movieName = "movie-4">
                 <div class="product-image">
                     <img src="images/SpyXFamily.jpg" class="product-thumb" alt="">
                     <img src="images/schedule.png" class="product-timer" alt="">
@@ -66,7 +68,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product_card" movieName = "movie-5">
                 <div class="product-image">
                     <img src="images/Transformers.jpg" class="product-thumb" alt="">
                     <img src="images/schedule.png" class="product-timer" alt="">
@@ -76,7 +78,7 @@
                 </div>>
             </div>
 
-            <div class="product-card">
+            <div class="product_card" movieName = "movie-6">
                 <div class="product-image">
                     <img src="images/JurassicPark.jpg" class="product-thumb" alt="">
                     <img src="images/schedule.png" class="product-timer" alt="">
@@ -86,7 +88,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product_card" movieName = "movie-7">
                 <div class="product-image">
                     <img src="images/Rango.jpg" class="product-thumb" alt="">
                     <img src="images/schedule.png" class="product-timer" alt="">
@@ -96,7 +98,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product_card" movieName = "movie-8">
                 <div class="product-image">
                     <img src="images/Ted.jpg" class="product-thumb" alt="">
                     <img src="images/schedule.png" class="product-timer" alt="">
@@ -106,7 +108,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product_card" movieName = "movie-9">
                 <div class="product-image">
                     <img src="images/Cars3.jpg" class="product-thumb" alt="">
                     <img src="images/schedule.png" class="product-timer" alt="">
@@ -119,21 +121,24 @@
     </section>
 
     <div class = "movie-preview" >
-        <div class = "preview active" data-target = "movie-1">
+        <div class = "preview" movieTarget = "movie-1">
+            <i class="fas fa-xmark"></i>
             <div class = "preview_img_container">
                     <img src="images/frozen2.jpg" alt="">
                     <h2 class = "preview_gradient"> </h2>
             </div>
+            
             <div class="form_container">
                 <form action="action.php">
                     <div class = "room_select">
                         <select name = "cinema_room" id="cinema_room" >
                             <option value="">Choose Cinema Room</option>
-                            <option value="1">Cinema Room 1</option>
+                            <option value="1" >Cinema Room 1</option>
                             <option value="2">Cinema Room 2</option>
                             <option value="3">Cinema Room 3</option>
                             <option value="4">Cinema Room 4</option>
                         </select>
+                        
                         <select id="time_slot">
                             <option value="">Choose Time Slot</option>
                             <option value="1:00pm">1:00pm</option>
@@ -146,6 +151,7 @@
 
 
                     <div class="screen_container"> SCREEN </div>
+
                     
 
                     <div class = "seat"> <!--Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
@@ -239,7 +245,7 @@
                         <hr>
                         <p>Movie  : (movie title) </p><br>
                         <p>Time   :</p><p class = "selectedSlot"></p><br>
-                        <p>Tickets:</p><br>
+                        <p>Tickets:</p><p id = "selectedId"></p><br>
                         <p>Cinema Room:</p> <p class = "selectedRoom"></p><br>
                         <p>Seats  :</p><br>
                         <p>Total  : (price)</p>
@@ -249,24 +255,1120 @@
                         <div class="legends selected"> <p>Selected</p></div>
                         <div class="legends sold"> <p>Sold</p></div>
                     </div>
-
-
-
-                    
-                    
-
-                    
-
-
                 </form>
-
-
             </div>
-
-
-
         </div>
+
+        <div class = "preview" movieTarget = "movie-2">
+            <i class="fas fa-xmark"></i>
+            <div class = "preview_img_container">
+                    <img src="images/ReadyPlayerOne.jpg" alt="">
+                    <h2 class = "preview_gradient"> </h2>
+            </div>
+            
+            <div class="form_container">
+                <form action="action.php">
+                    <div class = "room_select">
+                        <select name = "cinema_room" id="cinema_room" >
+                            <option value="">Choose Cinema Room</option>
+                            <option value="1" >Cinema Room 1</option>
+                            <option value="2">Cinema Room 2</option>
+                            <option value="3">Cinema Room 3</option>
+                            <option value="4">Cinema Room 4</option>
+                        </select>
+                        
+                        <select id="time_slot">
+                            <option value="">Choose Time Slot</option>
+                            <option value="1:00pm">1:00pm</option>
+                            <option value="2:00pm">2:00pm</option>
+                            <option value="3:00pm">3:00pm</option>
+                            <option value="4:00pm">4:00pm</option>
+                        </select>
+                    </div>
+                    
+
+
+                    <div class="screen_container"> SCREEN </div>
+
+                    
+
+                    <div class = "seat"> <!--Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
+                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha-->
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    
+                    <div class = "seat_2">
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    <div class="dash_line"></div>
+                    <div class="ticket_container">
+
+                        <h3>Seat Information</h3>
+                        <hr>
+                        <p>Movie  : (movie title) </p><br>
+                        <p>Time   :</p><p class = "selectedSlot"></p><br>
+                        <p>Tickets:</p><p id = "selectedId"></p><br>
+                        <p>Cinema Room:</p> <p class = "selectedRoom"></p><br>
+                        <p>Seats  :</p><br>
+                        <p>Total  : (price)</p>
+                        <button>Book</button>
+
+                        <div class="legends"> <p>Available</p></div>
+                        <div class="legends selected"> <p>Selected</p></div>
+                        <div class="legends sold"> <p>Sold</p></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class = "preview" movieTarget = "movie-3">
+            <i class="fas fa-xmark"></i>
+            <div class = "preview_img_container">
+                    <img src="images/KingKong.jpg" alt="">
+                    <h2 class = "preview_gradient"> </h2>
+            </div>
+            
+            <div class="form_container">
+                <form action="action.php">
+                    <div class = "room_select">
+                        <select name = "cinema_room" id="cinema_room" >
+                            <option value="">Choose Cinema Room</option>
+                            <option value="1" >Cinema Room 1</option>
+                            <option value="2">Cinema Room 2</option>
+                            <option value="3">Cinema Room 3</option>
+                            <option value="4">Cinema Room 4</option>
+                        </select>
+                        
+                        <select id="time_slot">
+                            <option value="">Choose Time Slot</option>
+                            <option value="1:00pm">1:00pm</option>
+                            <option value="2:00pm">2:00pm</option>
+                            <option value="3:00pm">3:00pm</option>
+                            <option value="4:00pm">4:00pm</option>
+                        </select>
+                    </div>
+                    
+
+
+                    <div class="screen_container"> SCREEN </div>
+
+                    
+
+                    <div class = "seat"> <!--Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
+                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha-->
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    
+                    <div class = "seat_2">
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    <div class="dash_line"></div>
+                    <div class="ticket_container">
+
+                        <h3>Seat Information</h3>
+                        <hr>
+                        <p>Movie  : (movie title) </p><br>
+                        <p>Time   :</p><p class = "selectedSlot"></p><br>
+                        <p>Tickets:</p><p id = "selectedId"></p><br>
+                        <p>Cinema Room:</p> <p class = "selectedRoom"></p><br>
+                        <p>Seats  :</p><br>
+                        <p>Total  : (price)</p>
+                        <button>Book</button>
+
+                        <div class="legends"> <p>Available</p></div>
+                        <div class="legends selected"> <p>Selected</p></div>
+                        <div class="legends sold"> <p>Sold</p></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class = "preview" movieTarget = "movie-4">
+            <i class="fas fa-xmark"></i>
+            <div class = "preview_img_container">
+                    <img src="images/SpyXFamily.jpg" alt="">
+                    <h2 class = "preview_gradient"> </h2>
+            </div>
+            
+            <div class="form_container">
+                <form action="action.php">
+                    <div class = "room_select">
+                        <select name = "cinema_room" id="cinema_room" >
+                            <option value="">Choose Cinema Room</option>
+                            <option value="1" >Cinema Room 1</option>
+                            <option value="2">Cinema Room 2</option>
+                            <option value="3">Cinema Room 3</option>
+                            <option value="4">Cinema Room 4</option>
+                        </select>
+                        
+                        <select id="time_slot">
+                            <option value="">Choose Time Slot</option>
+                            <option value="1:00pm">1:00pm</option>
+                            <option value="2:00pm">2:00pm</option>
+                            <option value="3:00pm">3:00pm</option>
+                            <option value="4:00pm">4:00pm</option>
+                        </select>
+                    </div>
+                    
+
+
+                    <div class="screen_container"> SCREEN </div>
+
+                    
+
+                    <div class = "seat"> <!--Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
+                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha-->
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    
+                    <div class = "seat_2">
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    <div class="dash_line"></div>
+                    <div class="ticket_container">
+
+                        <h3>Seat Information</h3>
+                        <hr>
+                        <p>Movie  : (movie title) </p><br>
+                        <p>Time   :</p><p class = "selectedSlot"></p><br>
+                        <p>Tickets:</p><p id = "selectedId"></p><br>
+                        <p>Cinema Room:</p> <p class = "selectedRoom"></p><br>
+                        <p>Seats  :</p><br>
+                        <p>Total  : (price)</p>
+                        <button>Book</button>
+
+                        <div class="legends"> <p>Available</p></div>
+                        <div class="legends selected"> <p>Selected</p></div>
+                        <div class="legends sold"> <p>Sold</p></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class = "preview" movieTarget = "movie-5">
+            <i class="fas fa-xmark"></i>
+            <div class = "preview_img_container">
+                    <img src="images/Transformers.jpg" alt="">
+                    <h2 class = "preview_gradient"> </h2>
+            </div>
+            
+            <div class="form_container">
+                <form action="action.php">
+                    <div class = "room_select">
+                        <select name = "cinema_room" id="cinema_room" >
+                            <option value="">Choose Cinema Room</option>
+                            <option value="1" >Cinema Room 1</option>
+                            <option value="2">Cinema Room 2</option>
+                            <option value="3">Cinema Room 3</option>
+                            <option value="4">Cinema Room 4</option>
+                        </select>
+                        
+                        <select id="time_slot">
+                            <option value="">Choose Time Slot</option>
+                            <option value="1:00pm">1:00pm</option>
+                            <option value="2:00pm">2:00pm</option>
+                            <option value="3:00pm">3:00pm</option>
+                            <option value="4:00pm">4:00pm</option>
+                        </select>
+                    </div>
+                    
+
+
+                    <div class="screen_container"> SCREEN </div>
+
+                    
+
+                    <div class = "seat"> <!--Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
+                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha-->
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    
+                    <div class = "seat_2">
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    <div class="dash_line"></div>
+                    <div class="ticket_container">
+
+                        <h3>Seat Information</h3>
+                        <hr>
+                        <p>Movie  : (movie title) </p><br>
+                        <p>Time   :</p><p class = "selectedSlot"></p><br>
+                        <p>Tickets:</p><p id = "selectedId"></p><br>
+                        <p>Cinema Room:</p> <p class = "selectedRoom"></p><br>
+                        <p>Seats  :</p><br>
+                        <p>Total  : (price)</p>
+                        <button>Book</button>
+
+                        <div class="legends"> <p>Available</p></div>
+                        <div class="legends selected"> <p>Selected</p></div>
+                        <div class="legends sold"> <p>Sold</p></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class = "preview" movieTarget = "movie-6">
+            <i class="fas fa-xmark"></i>
+            <div class = "preview_img_container">
+                    <img src="images/JurassicPark.jpg" alt="">
+                    <h2 class = "preview_gradient"> </h2>
+            </div>
+            
+            <div class="form_container">
+                <form action="action.php">
+                    <div class = "room_select">
+                        <select name = "cinema_room" id="cinema_room" >
+                            <option value="">Choose Cinema Room</option>
+                            <option value="1" >Cinema Room 1</option>
+                            <option value="2">Cinema Room 2</option>
+                            <option value="3">Cinema Room 3</option>
+                            <option value="4">Cinema Room 4</option>
+                        </select>
+                        
+                        <select id="time_slot">
+                            <option value="">Choose Time Slot</option>
+                            <option value="1:00pm">1:00pm</option>
+                            <option value="2:00pm">2:00pm</option>
+                            <option value="3:00pm">3:00pm</option>
+                            <option value="4:00pm">4:00pm</option>
+                        </select>
+                    </div>
+                    
+
+
+                    <div class="screen_container"> SCREEN </div>
+
+                    
+
+                    <div class = "seat"> <!--Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
+                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha-->
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    
+                    <div class = "seat_2">
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    <div class="dash_line"></div>
+                    <div class="ticket_container">
+
+                        <h3>Seat Information</h3>
+                        <hr>
+                        <p>Movie  : (movie title) </p><br>
+                        <p>Time   :</p><p class = "selectedSlot"></p><br>
+                        <p>Tickets:</p><p id = "selectedId"></p><br>
+                        <p>Cinema Room:</p> <p class = "selectedRoom"></p><br>
+                        <p>Seats  :</p><br>
+                        <p>Total  : (price)</p>
+                        <button>Book</button>
+
+                        <div class="legends"> <p>Available</p></div>
+                        <div class="legends selected"> <p>Selected</p></div>
+                        <div class="legends sold"> <p>Sold</p></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class = "preview" movieTarget = "movie-7">
+            <i class="fas fa-xmark"></i>
+            <div class = "preview_img_container">
+                    <img src="images/Rango.jpg" alt="">
+                    <h2 class = "preview_gradient"> </h2>
+            </div>
+            
+            <div class="form_container">
+                <form action="action.php">
+                    <div class = "room_select">
+                        <select name = "cinema_room" id="cinema_room" >
+                            <option value="">Choose Cinema Room</option>
+                            <option value="1" >Cinema Room 1</option>
+                            <option value="2">Cinema Room 2</option>
+                            <option value="3">Cinema Room 3</option>
+                            <option value="4">Cinema Room 4</option>
+                        </select>
+                        
+                        <select id="time_slot">
+                            <option value="">Choose Time Slot</option>
+                            <option value="1:00pm">1:00pm</option>
+                            <option value="2:00pm">2:00pm</option>
+                            <option value="3:00pm">3:00pm</option>
+                            <option value="4:00pm">4:00pm</option>
+                        </select>
+                    </div>
+                    
+
+
+                    <div class="screen_container"> SCREEN </div>
+
+                    
+
+                    <div class = "seat"> <!--Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
+                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha-->
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    
+                    <div class = "seat_2">
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    <div class="dash_line"></div>
+                    <div class="ticket_container">
+
+                        <h3>Seat Information</h3>
+                        <hr>
+                        <p>Movie  : (movie title) </p><br>
+                        <p>Time   :</p><p class = "selectedSlot"></p><br>
+                        <p>Tickets:</p><p id = "selectedId"></p><br>
+                        <p>Cinema Room:</p> <p class = "selectedRoom"></p><br>
+                        <p>Seats  :</p><br>
+                        <p>Total  : (price)</p>
+                        <button>Book</button>
+
+                        <div class="legends"> <p>Available</p></div>
+                        <div class="legends selected"> <p>Selected</p></div>
+                        <div class="legends sold"> <p>Sold</p></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class = "preview" movieTarget = "movie-8">
+            <i class="fas fa-xmark"></i>
+            <div class = "preview_img_container">
+                    <img src="images/Ted.jpg" alt="">
+                    <h2 class = "preview_gradient"> </h2>
+            </div>
+            
+            <div class="form_container">
+                <form action="action.php">
+                    <div class = "room_select">
+                        <select name = "cinema_room" id="cinema_room" >
+                            <option value="">Choose Cinema Room</option>
+                            <option value="1" >Cinema Room 1</option>
+                            <option value="2">Cinema Room 2</option>
+                            <option value="3">Cinema Room 3</option>
+                            <option value="4">Cinema Room 4</option>
+                        </select>
+                        
+                        <select id="time_slot">
+                            <option value="">Choose Time Slot</option>
+                            <option value="1:00pm">1:00pm</option>
+                            <option value="2:00pm">2:00pm</option>
+                            <option value="3:00pm">3:00pm</option>
+                            <option value="4:00pm">4:00pm</option>
+                        </select>
+                    </div>
+                    
+
+
+                    <div class="screen_container"> SCREEN </div>
+
+                    
+
+                    <div class = "seat"> <!--Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
+                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha-->
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    
+                    <div class = "seat_2">
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    <div class="dash_line"></div>
+                    <div class="ticket_container">
+
+                        <h3>Seat Information</h3>
+                        <hr>
+                        <p>Movie  : (movie title) </p><br>
+                        <p>Time   :</p><p class = "selectedSlot"></p><br>
+                        <p>Tickets:</p><p id = "selectedId"></p><br>
+                        <p>Cinema Room:</p> <p class = "selectedRoom"></p><br>
+                        <p>Seats  :</p><br>
+                        <p>Total  : (price)</p>
+                        <button>Book</button>
+
+                        <div class="legends"> <p>Available</p></div>
+                        <div class="legends selected"> <p>Selected</p></div>
+                        <div class="legends sold"> <p>Sold</p></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class = "preview" movieTarget = "movie-9">
+            <i class="fas fa-xmark"></i>
+            <div class = "preview_img_container">
+                    <img src="images/Cars3.jpg" alt="">
+                    <h2 class = "preview_gradient"> </h2>
+            </div>
+            
+            <div class="form_container">
+                <form action="action.php">
+                    <div class = "room_select">
+                        <select name = "cinema_room" id="cinema_room" >
+                            <option value="">Choose Cinema Room</option>
+                            <option value="1" >Cinema Room 1</option>
+                            <option value="2">Cinema Room 2</option>
+                            <option value="3">Cinema Room 3</option>
+                            <option value="4">Cinema Room 4</option>
+                        </select>
+                        
+                        <select id="time_slot">
+                            <option value="">Choose Time Slot</option>
+                            <option value="1:00pm">1:00pm</option>
+                            <option value="2:00pm">2:00pm</option>
+                            <option value="3:00pm">3:00pm</option>
+                            <option value="4:00pm">4:00pm</option>
+                        </select>
+                    </div>
+                    
+
+
+                    <div class="screen_container"> SCREEN </div>
+
+                    
+
+                    <div class = "seat"> <!--Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
+                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha-->
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    
+                    <div class = "seat_2">
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                        <br>
+                        <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox">
+                        <input type="checkbox" name = "seat" value = "seat-4" class = "checkbox">
+                    </div>
+                    <div class="dash_line"></div>
+                    <div class="ticket_container">
+
+                        <h3>Seat Information</h3>
+                        <hr>
+                        <p>Movie  : (movie title) </p><br>
+                        <p>Time   :</p><p class = "selectedSlot"></p><br>
+                        <p>Tickets:</p><p id = "selectedId"></p><br>
+                        <p>Cinema Room:</p> <p class = "selectedRoom"></p><br>
+                        <p>Seats  :</p><br>
+                        <p>Total  : (price)</p>
+                        <button>Book</button>
+
+                        <div class="legends"> <p>Available</p></div>
+                        <div class="legends selected"> <p>Selected</p></div>
+                        <div class="legends sold"> <p>Sold</p></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+        </div>
+
+
     </div>
+    <script src="pop_up_logic.js"></script>
     <script src="update_select_item.js"></script>
     <script src="script.js"></script>
 </body>

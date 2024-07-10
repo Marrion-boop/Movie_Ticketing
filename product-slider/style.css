@@ -66,7 +66,7 @@ button:hover {
   display: none;
 }
 
-.product-card {
+.product_card {
   flex: 0 0 auto;
   width: 250px;
   height: 450px;
@@ -236,10 +236,12 @@ input[type = "checkbox"]{
   border-radius:20%;
   padding:15px;
   margin:2px;
+
 }
 
 input[type = "checkbox"]:hover{
   background-color: #B8B8B8;
+  cursor:pointer;
 }
 
 input[type = "checkbox"]:checked{
@@ -257,9 +259,23 @@ input[type = "checkbox"]:checked{
   min-height: 100vh;
   width: 100%;
   background:rgba(0, 0, 0, .8);
-  display:flex;
+  display:none;
   align-items: center;
   justify-content:center;
+}
+
+.movie-preview .fa-xmark{
+  position: absolute;
+  top: 1rem; right: 1.5rem;
+  cursor: pointer;
+  color: #0D0F0A;
+  font-size: 2rem;
+}
+
+.movie-preview .fa-xmark:hover {
+  transform: rotate(90deg);
+  transition : .5s;
+  color:#dd3939;
 }
 
 .movie-preview .preview{
@@ -270,6 +286,8 @@ input[type = "checkbox"]:checked{
   margin: 2rem;
   width:55rem;
   height:30rem;
+  border-radius: 30px;
+
 }
 
 .movie-preview .preview select{
@@ -282,7 +300,10 @@ input[type = "checkbox"]:checked{
   font-size: 15px; 
   font-weight: 400;
   font-family: 'Jost';
+  cursor:pointer;
 }
+
+
 
 .movie-preview .preview .room_select{
 
@@ -294,6 +315,7 @@ input[type = "checkbox"]:checked{
 
 .movie-preview .preview.active{
   display:inline-block;
+  
 }
 
 
@@ -388,7 +410,7 @@ input[type = "checkbox"]:checked{
 }
 
 .movie-preview .preview .form_container .ticket_container button{
-  background-color: #04AA6D;
+  background-color: #84CA79;
   border: none;
   color: white;
   padding: 10px 60px;
@@ -396,7 +418,7 @@ input[type = "checkbox"]:checked{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 9px;
+  margin: 4px 2px;
   cursor: pointer;
   font-weight: 400;
   font-family: 'Jost';
@@ -423,7 +445,7 @@ input[type = "checkbox"]:checked{
   background-color: #84CA79;
 }
 .movie-preview .preview .form_container .ticket_container .legends.sold{
-  background-color: #CD6969;
+  background-color: #dd3939;
 }
 .movie-preview .preview .form_container .ticket_container .legends p{
   position: absolute;

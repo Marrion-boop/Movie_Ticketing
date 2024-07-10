@@ -25,6 +25,21 @@ selectedTime.addEventListener('change', function (e) {
     selectedSlot.innerHTML = e.target.value
 })
 
+var checkboxes = document.querySelectorAll('.checkbox');
+var count = 0;
+for(var i = 0; i<checkboxes.length; i++) {
+    checkboxes[i]. addEventListener('click', function() {
+        if(this.checked == true) {
+            count++;
+        }
+        else
+        {
+            count--;
+        }
+        document.getElementById('selectedId').innerHTML = count;
+    })
+}
+
 
 
 
