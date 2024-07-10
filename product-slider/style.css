@@ -66,31 +66,31 @@ button:hover {
   align-items:center;
 }
 .box1{      
-  background-image: url(../product-slider/images/Image1.jpg);
+  background-image: url(/images/Image1.jpg);
   background-size:cover;
   background-position:center center;}
 .box2{
-  background-image: url(../product-slider/images/Image2.jpg);
+  background-image: url(/images/Image2.jpg);
   background-size:cover;
   background-position:center center;}
 .box3{
-  background-image: url(../product-slider/images/Image3.jpg);
+  background-image: url(/images/Image3.jpg);
   background-size:cover;
   background-position:center center;}
 .box4{
-  background-image: url(../product-slider/images/Image4.jpg);
+  background-image: url(/images/Image4.jpg);
   background-size:cover;
   background-position:center center;}
 .box5{
-  background-image: url(../product-slider/images/Image5.jpg);
+  background-image: url(/images/Image5.jpg);
   background-size:cover;
   background-position:center center;}
 .box6{
-  background-image: url(../product-slider/images/Image6.jpg);
+  background-image: url(/images/Image6.jpg);
   background-size:cover;
   background-position:center center;}
 .box7{
-  background-image: url(../product-slider/images/Image7.jpg);
+  background-image: url(/images/Image7.jpg);
   background-size:cover;
   background-position:center center;}
 
