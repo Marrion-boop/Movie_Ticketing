@@ -120,31 +120,26 @@
 
     <div class = "movie-preview" >
         <div class = "preview active" data-target = "movie-1">
-
-
             <div class = "preview_img_container">
                     <img src="images/frozen2.jpg" alt="">
                     <h2 class = "preview_gradient"> </h2>
             </div>
-
-
             <div class="form_container">
                 <form action="action.php">
-
-                    
-
                     <div class = "room_select">
-                        <select id="cinema_room" >
-                            <option value="room_1">Cinema Room 1</option>
-                            <option value="room_2">Cinema Room 2</option>
-                            <option value="room_3">Cinema Room 3</option>
-                            <option value="room_4">Cinema Room 4</option>
+                        <select name = "cinema_room" id="cinema_room" >
+                            <option value="">Choose Cinema Room</option>
+                            <option value="1">Cinema Room 1</option>
+                            <option value="2">Cinema Room 2</option>
+                            <option value="3">Cinema Room 3</option>
+                            <option value="4">Cinema Room 4</option>
                         </select>
                         <select id="time_slot">
-                            <option value="time_1">1:00pm</option>
-                            <option value="time_2">2:00pm</option>
-                            <option value="time_3">3:00pm</option>
-                            <option value="time_4">4:00pm</option>
+                            <option value="">Choose Time Slot</option>
+                            <option value="1:00pm">1:00pm</option>
+                            <option value="2:00pm">2:00pm</option>
+                            <option value="3:00pm">3:00pm</option>
+                            <option value="4:00pm">4:00pm</option>
                         </select>
                     </div>
                     
@@ -242,11 +237,12 @@
 
                         <h3>Seat Information</h3>
                         <hr>
-                        <p>Movie  : (movie title) <br></p>
-                        <p>Time   : (time chosen)<br></p>
-                        <p>Tickets: (ticket code name)<br></p>
-                        <p>Total  : (price)<br></p>
-                        <p>Seats  : (selected seats)</p>
+                        <p>Movie  : (movie title) </p><br>
+                        <p>Time   :</p><p class = "selectedSlot"></p><br>
+                        <p>Tickets:</p><br>
+                        <p>Cinema Room:</p> <p class = "selectedRoom"></p><br>
+                        <p>Seats  :</p><br>
+                        <p>Total  : (price)</p>
                         <button>Book</button>
 
                         <div class="legends"> <p>Available</p></div>
@@ -271,7 +267,7 @@
 
         </div>
     </div>
-    
+    <script src="update_select_item.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
