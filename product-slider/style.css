@@ -382,8 +382,53 @@ input[type = "checkbox"]:checked{
   position: relative;
   margin:15px;
   right:15px;
-
+  font-weight: 200;
+  font-family: 'Jost';
 }
+
+.movie-preview .preview .form_container .ticket_container button{
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-weight: 400;
+  font-family: 'Jost';
+  border-radius: 17px;
+}
+
+.movie-preview .preview .form_container .ticket_container .legends{
+  position: relative;
+  height:33px;
+  width:33px;
+  top:8px;
+  background-color: #DADADA;
+  text-align: left;
+  border-radius: 7px;
+  margin:12px 4px 0px;
+}
+
+.movie-preview .preview .form_container .ticket_container .legends.selected{
+  background-color: #84CA79;
+}
+.movie-preview .preview .form_container .ticket_container .legends.sold{
+  background-color: #CD6969;
+}
+
+
+.movie-preview .preview .form_container .ticket_container .legends p{
+  position: absolute;
+  left:30px;
+  top:-10px;
+  font-weight: 300;
+  font-family: 'Jost';
+}
+
 
 
 
