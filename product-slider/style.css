@@ -1,5 +1,6 @@
 /* HEADER */
 
+
 * {
   margin: 0;
   padding: 0;
@@ -225,7 +226,7 @@ opacity: 0;
 .seat_2{
   position: relative;
   left:190px;
-  bottom:306px;
+  bottom:300px;
 }
 
 
@@ -248,68 +249,14 @@ input[type = "checkbox"]:checked{
   background-color: #84CA79;
 }
 
-/*POP-UP PAYMENT*/
 
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 200ms ease-in-out;
-  border: 1px solid black;
-  border-radius: 10px;
-  z-index: 20;
-  background-color: white;
-  width: 500px;
-  max-width: 80%;
-}
 
-.modal.active{
-  transform: translate(-50%, -50%) scale(1);
-}
 
-.modal-header{
-  padding: 10px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid black;
-}
 
-.modal-header .title{
-  font-size: 1.25rem;
-  font-weight: bold;
-}
 
-.modal-header .close-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 1.25rem;
-  font-weight: bold;
-}
 
-.modal-body{
-  padding: 10px 15px;
-}
 
-#overlay{
-  position: fixed;
-  opacity: 0;
-  transition: 200ms ease-in-out;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, .5);
-  pointer-events: none;
-}
 
-#overlay.active{
-  pointer-events: all;
-  opacity: 1;
-}
 
 /*movies*/
 .movie-preview{
@@ -442,6 +389,11 @@ input[type = "checkbox"]:checked{
   font-family: 'Jost';
 }
 
+.movie-preview .preview .form_container .dash_line.two{
+  height:410px;
+  left:330px;
+}
+
 .movie-preview .preview .form_container .ticket_container{
   position:absolute;
   top:27px;
@@ -456,19 +408,20 @@ input[type = "checkbox"]:checked{
   width:180px;
   position: relative;
   right:22px;
-  margin:5px;
+  margin: 5px;
+  margin-bottom:30px;
 }
 
 .movie-preview .preview .form_container .ticket_container p{
   position: relative;
   display:inline-block;
-  margin:5px;
+  margin:3px;
   right:25px;
   font-weight: 200;
   font-family: 'Jost';
 }
 
-.movie-preview .preview .form_container .ticket_container button{
+.movie-preview .preview .form_container .ticket_container .book{
   background-color: #84CA79;
   border: none;
   color: white;
@@ -483,6 +436,77 @@ input[type = "checkbox"]:checked{
   font-family: 'Jost';
   border-radius: 17px;
 }
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  height:500px;
+  width:500px;
+  border-color: #ffffff;
+  background-color: #ffffff;
+  border-radius: 30px;
+
+}
+
+.modal::backdrop{
+  background:rgba(0, 0, 0, .8);
+}
+
+
+
+.modal .modal_container{
+
+  position: relative;
+  background-color: #0D0F0A;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  top: 50%;
+  left:50%;
+  height:450px;
+  width:450px;
+
+}
+
+.modal .modal_container h3{
+  text-align: center;
+  position: relative;
+  top: 9%;
+  font-size: 25px;
+  color:#ffffff;
+  font-weight: 600;
+}
+
+.modal .modal_container hr{
+  
+  position: relative;
+  top:11%;
+  left:29%;
+}
+
+.modal .modal_container p{
+  padding: 8px;
+  color: #ffffff;
+  text-align: left;
+  top: 30px;
+  left:120px;
+}
+.modal .modal_container button{
+  position: absolute;
+  bottom:30px;
+  right:140px;
+}
+
+.modal  .fa-xmark{
+  font-size: 25px;
+  top:10px;
+  right:13px;
+  
+}
+
+
+
 
 
 
@@ -515,31 +539,8 @@ input[type = "checkbox"]:checked{
   font-size: 14px;
 }
 
-.payment{
-  position:fixed;
-  top:0; left:0;
-  min-height: 100vh;
-  width: 100%;
-  background:rgba(0, 0, 0, .8);
-  display:none;
-  align-items: center;
-  justify-content:center;
-}
+.movie-preview .preview .form_container .ticket_container .reciept_container{
 
-.payment .payment_container{
-  display:none;
-  padding:3rem;
-  background: #fff;
-  position: absolute;
-  margin: 2rem;
-  width:55rem;
-  height:30rem;
-  border-radius: 30px;
-}
-
-.movie-preview payment_container.active{
-  display:inline-block;
-  
 }
 
 

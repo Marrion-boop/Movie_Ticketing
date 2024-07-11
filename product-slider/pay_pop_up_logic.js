@@ -1,35 +1,11 @@
-const openModalButtons = document.querySelectorAll('[data-modal-target]')
-const closeModalButtons = document.querySelectorAll('[data-close-button]')
-const overlay = document.getElementById('overlay')
+const modal = document.querySelector("#modal");
+const openModal = document.querySelector(".open-button");
+const closeModal = document.querySelector(".close-button");
 
-openModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = document.querySelector(button.dataset.modalTarget)
-        openModal(modal)
-    })
-})
+openModal.addEventListener("click", () => {
+  modal.showModal();
+});
 
-closeModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = button.closest('.modal')
-        closeModal(modal)
-    })
-})
-
-function openModal(modal){
-    if(modal == null) return
-    modal.classList.add('active')
-    previewBox.forEach(close =>{
-        close.querySelector('.book').onclick = () =>{
-          close.classList.remove('active');
-          preveiwContainer.style.display = 'none';
-        };
-      });
-    
-}
-
-function closeModal(modal){
-    if(modal == null) return
-    modal.classList.remove('active')
-    overlay.classList.remove('active')
-}
+closeModal.addEventListener("click", () => {
+  modal.close();
+});

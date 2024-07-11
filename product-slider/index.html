@@ -243,23 +243,33 @@
 
                         <h3>Seat Information</h3>
                         <hr>
-                        <p>Movie  : (movie title) </p><br>
+                        <p>Movie  :  </p><br> <!-- I would say galing na to sa database of some sort-->
                         <p>Time   :</p><p class = "selectedSlot_1"></p><br>
                         <p>Tickets:</p><p id = "selectedId_1"></p><br>
                         <p>Cinema Room:</p> <p class = "selectedRoom_1"></p><br>
-                        <p>Seats  :</p><br>
-                        <p>Total  : (price)</p>
-                        <button data-modal-target="#modal" class = "book" >Book</button>
-                        <div class="modal" id="modal">
-                        <div class="modal-header">
-                            <div class="title">HEADER</div>
-                            <button data-close-button class="close-button">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            wawawawawa
-                        </div>
-                        </div>
-                        <div id="overlay"></div>
+                        <p>Seats  :</p><br> <!--This is seat codes ex. A-1-->
+                        <p>Total  :</p><p id = "totalPrice_1"></p>
+
+                        <button type = "button" class = "book open-button">Book</button>
+                        
+                        
+                        <dialog  class = "modal" id="modal">
+                            <div class="modal_container">
+                                <h3>Reciept</h3>
+                                <hr>
+                                <p>Movie  :  </p><br>
+                                <p>Time   :</p><p class = "selectedSlotnew_1"></p><br>
+                                <p>Tickets:</p><p id = "selectedIdnew_1"></p><br>
+                                <p>Cinema Room:</p> <p class = "selectedRoomnew_1"></p><br>
+                                <p>Seats  :</p><br>
+                                <p>Total  : </p><p id = "totalPricenew_1"></p>
+                                
+                                <button  class = "book">Confirm</button>
+                            </div>
+                            <button type = "button" class="fas fa-xmark close-button" ></button>
+                        </dialog>
+
+
 
 
 
