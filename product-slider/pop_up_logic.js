@@ -23,10 +23,6 @@ previewBox.forEach(close =>{
     };
   });
 
-  previewBox.forEach(close =>{
-    close.querySelector('.book').onclick = () =>{
-      close.classList.remove('active');
-      preveiwContainer.style.display = 'none';
-    };
-  });
+ 
+  
 

@@ -249,9 +249,17 @@
                         <p>Cinema Room:</p> <p class = "selectedRoom_1"></p><br>
                         <p>Seats  :</p><br>
                         <p>Total  : (price)</p>
-                        <button class = "book" >Book</button>
-
-
+                        <button data-modal-target="#modal" class = "book" >Book</button>
+                        <div class="modal" id="modal">
+                        <div class="modal-header">
+                            <div class="title">HEADER</div>
+                            <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            wawawawawa
+                        </div>
+                        </div>
+                        <div id="overlay"></div>
 
 
 
@@ -1374,6 +1382,7 @@
 
 
     </div>
+    <script src="pay_pop_up_logic.js"></script>
     <script src="pop_up_logic.js"></script>
     <script src="update_select_item.js"></script>
     <script src="script.js"></script>
