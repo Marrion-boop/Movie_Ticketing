@@ -225,7 +225,7 @@ opacity: 0;
 .seat_2{
   position: relative;
   left:190px;
-  bottom:303.5px;
+  bottom:306px;
 }
 
 
@@ -456,6 +456,32 @@ input[type = "checkbox"]:checked{
   font-size: 14px;
 }
 
+.payment{
+  position:fixed;
+  top:0; left:0;
+  min-height: 100vh;
+  width: 100%;
+  background:rgba(0, 0, 0, .8);
+  display:none;
+  align-items: center;
+  justify-content:center;
+}
+
+.payment .payment_container{
+  display:none;
+  padding:3rem;
+  background: #fff;
+  position: absolute;
+  margin: 2rem;
+  width:55rem;
+  height:30rem;
+  border-radius: 30px;
+}
+
+.movie-preview payment_container.active{
+  display:inline-block;
+  
+}
 
 
 
