@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-9">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,6 +21,32 @@
     </div>
 
 
+
+
+
+    <body>
+        <div class="container">
+            <div class="slider">
+                <div class="box1">
+                </div>
+                <div class="box2">
+                </div>
+                <div class="box3">
+                </div>
+                <div class="box4">
+                </div>
+                <div class="box5">
+                </div>
+                <div class="box6">
+                </div>
+                <div class="box7">
+                </div>
+            </div>
+        </div>
+        <div id="test"></div>
+
+
+    
 
     <section class="product"> 
         <h2 class="product-category">Now Showing</h2>
@@ -75,7 +101,7 @@
                     <h2 class="overlay-text">Transformers</h2>
                     <h2 class="overlay-subtext">2hr 45m</h2>
                     <h2 class="Gradient-placeholder">  </h2>
-                </div>>
+                </div>
             </div>
 
             <div class="product_card" movieName = "movie-6">
@@ -104,7 +130,7 @@
                     <img src="images/schedule.png" class="product-timer" alt="">
                     <h2 class="overlay-text">Ted</h2>
                     <h2 class="overlay-subtext">1hr 46m</h2>
-                    <h2 class="Gradient-placeholder">  </h2>
+                    <h2 class="Gradient-placeholder">  </h2></button>
                 </div>
             </div>
 
@@ -114,7 +140,7 @@
                     <img src="images/schedule.png" class="product-timer" alt="">
                     <h2 class="overlay-text">Cars 3</h2>
                     <h2 class="overlay-subtext">1hr 49m</h2>
-                    <h2 class="Gradient-placeholder">  </h2>
+                    <h2 class="Gradient-placeholder">  </h2></button>
                 </div>
             </div>
         </div>
@@ -243,23 +269,32 @@
 
                         <h3>Seat Information</h3>
                         <hr>
-                        <p>Movie  : (movie title) </p><br>
+                        <p>Movie  :  </p><br> <!-- I would say galing na to sa database of some sort-->
                         <p>Time   :</p><p class = "selectedSlot_1"></p><br>
                         <p>Tickets:</p><p id = "selectedId_1"></p><br>
                         <p>Cinema Room:</p> <p class = "selectedRoom_1"></p><br>
-                        <p>Seats  :</p><br>
-                        <p>Total  : (price)</p>
-                        <button data-modal-target="#modal" class = "book" >Book</button>
-                        <div class="modal" id="modal">
-                        <div class="modal-header">
-                            <div class="title">HEADER</div>
-                            <button data-close-button class="close-button">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            wawawawawa
-                        </div>
-                        </div>
-                        <div id="overlay"></div>
+                        <p>Seats  :</p><br> <!--This is seat codes ex. A-1-->
+                        <p>Total  :</p><p id = "totalPrice_1"></p>
+
+                        <button type = "button" class = "book open-button_1">Book</button>
+                        
+                        <dialog  class = "modal" id="modal_1">
+                            <div class="modal_container">
+                                <h3>Reciept</h3>
+                                <hr>
+                                <p>Movie  :  </p><br>
+                                <p>Time   :</p><p class = "selectedSlotnew_1"></p><br>
+                                <p>Tickets:</p><p id = "selectedIdnew_1"></p><br>
+                                <p>Cinema Room:</p> <p class = "selectedRoomnew_1"></p><br>
+                                <p>Seats  :</p><br>
+                                <p>Total  : </p><p id = "totalPricenew_1"></p>
+                                
+                                <button  class = "book">Confirm</button>
+                            </div>
+                            <button type = "button" class="fas fa-xmark close-button_1" ></button>
+                        </dialog>
+
+
 
 
 
@@ -270,7 +305,7 @@
                 </form>
             </div>
         </div>
-<!--
+
         <div class = "preview" movieTarget = "movie-2">
             <i class="fas fa-xmark"></i>
             <div class = "preview_img_container">
@@ -279,7 +314,7 @@
             </div>
             
             <div class="form_container">
-                <form action="action.php">
+                <form>
                     <div class = "room_select">
                         <select name = "cinema_room" id="cinema_room_2" >
                             <option value="">Choose Cinema Room</option>
@@ -304,8 +339,7 @@
 
                     
 
-                    <div class = "seat"> Palitan nalang values ng seats thanks so much, pwede niyo loop if ever
-                        Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha
+                    <div class = "seat">
                         <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox_2">
                         <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox_2">
                         <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox_2">
@@ -398,8 +432,28 @@
                         <p>Tickets:</p><p id = "selectedId_2"></p><br>
                         <p>Cinema Room:</p> <p class = "selectedRoom_2"></p><br>
                         <p>Seats  :</p><br>
-                        <p>Total  : (price)</p>
-                        <button>Book</button>
+                        <p>Total  :</p><p id = "totalPrice_2"></p>
+
+
+                        <button type = "button" class = "book open-button_2">Book</button>
+                        
+                        
+                        <dialog  class = "modal" id="modal_2">
+                            <div class="modal_container">
+                                <h3>Reciept</h3>
+                                <hr>
+                                <p>Movie  :  </p><br>
+                                <p>Time   :</p><p class = "selectedSlotnew_2"></p><br>
+                                <p>Tickets:</p><p id = "selectedIdnew_2"></p><br>
+                                <p>Cinema Room:</p> <p class = "selectedRoomnew_2"></p><br>
+                                <p>Seats  :</p><br>
+                                <p>Total  : </p><p id = "totalPricenew_1"></p>
+                                
+                                <button  class = "book">Confirm</button>
+                            </div>
+                            <button type = "button" class="fas fa-xmark close-button_2" ></button>
+                        </dialog>
+
 
                         <div class="legends"> <p>Available</p></div>
                         <div class="legends selected"> <p>Selected</p></div>
@@ -442,8 +496,7 @@
 
                     
 
-                    <div class = "seat"> Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
-                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha
+                    <div class = "seat">
                         <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox_3">
                         <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox_3">
                         <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox_3">
@@ -536,8 +589,27 @@
                         <p>Tickets:</p><p id = "selectedId_3"></p><br>
                         <p>Cinema Room:</p> <p class = "selectedRoom_3"></p><br>
                         <p>Seats  :</p><br>
-                        <p>Total  : (price)</p>
-                        <button>Book</button>
+                        <p>Total  :</p><p id = "totalPrice_3"></p>
+
+
+                        <button type = "button" class = "book open-button_3">Book</button>
+                        
+                        
+                        <dialog  class = "modal" id="modal_3">
+                            <div class="modal_container">
+                                <h3>Reciept</h3>
+                                <hr>
+                                <p>Movie  :  </p><br>
+                                <p>Time   :</p><p class = "selectedSlotnew_3"></p><br>
+                                <p>Tickets:</p><p id = "selectedIdnew_3"></p><br>
+                                <p>Cinema Room:</p> <p class = "selectedRoomnew_3"></p><br>
+                                <p>Seats  :</p><br>
+                                <p>Total  : </p><p id = "totalPricenew_3"></p>
+                                
+                                <button  class = "book">Confirm</button>
+                            </div>
+                            <button type = "button" class="fas fa-xmark close-button_3" ></button>
+                        </dialog>
 
 
 
@@ -582,8 +654,7 @@
 
                     
 
-                    <div class = "seat"> Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
-                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha
+                    <div class = "seat">
                         <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox_4">
                         <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox_4">
                         <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox_4">
@@ -676,8 +747,27 @@
                         <p>Tickets:</p><p id = "selectedId_4"></p><br>
                         <p>Cinema Room:</p> <p class = "selectedRoom_4"></p><br>
                         <p>Seats  :</p><br>
-                        <p>Total  : (price)</p>
-                        <button>Book</button>
+                        <p>Total  :</p><p id = "totalPrice_4"></p>
+
+
+                        <button type = "button" class = "book open-button_4">Book</button>
+                        
+                        
+                        <dialog  class = "modal" id="modal_4">
+                            <div class="modal_container">
+                                <h3>Reciept</h3>
+                                <hr>
+                                <p>Movie  :  </p><br>
+                                <p>Time   :</p><p class = "selectedSlotnew_4"></p><br>
+                                <p>Tickets:</p><p id = "selectedIdnew_4"></p><br>
+                                <p>Cinema Room:</p> <p class = "selectedRoomnew_4"></p><br>
+                                <p>Seats  :</p><br>
+                                <p>Total  : </p><p id = "totalPricenew_4"></p>
+                                
+                                <button  class = "book">Confirm</button>
+                            </div>
+                            <button type = "button" class="fas fa-xmark close-button_4" ></button>
+                        </dialog>
 
                         <div class="legends"> <p>Available</p></div>
                         <div class="legends selected"> <p>Selected</p></div>
@@ -720,8 +810,7 @@
 
                     
 
-                    <div class = "seat"> Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
-                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha
+                    <div class = "seat"> 
                         <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox_5">
                         <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox_5">
                         <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox_5">
@@ -814,8 +903,27 @@
                         <p>Tickets:</p><p id = "selectedId_5"></p><br>
                         <p>Cinema Room:</p> <p class = "selectedRoom_5"></p><br>
                         <p>Seats  :</p><br>
-                        <p>Total  : (price)</p>
-                        <button>Book</button>
+                        <p>Total  :</p><p id = "totalPrice_5"></p>
+
+
+                        <button type = "button" class = "book open-button_5">Book</button>
+                        
+                        
+                        <dialog  class = "modal" id="modal_5">
+                            <div class="modal_container">
+                                <h3>Reciept</h3>
+                                <hr>
+                                <p>Movie  :  </p><br>
+                                <p>Time   :</p><p class = "selectedSlotnew_5"></p><br>
+                                <p>Tickets:</p><p id = "selectedIdnew_5"></p><br>
+                                <p>Cinema Room:</p> <p class = "selectedRoomnew_5"></p><br>
+                                <p>Seats  :</p><br>
+                                <p>Total  : </p><p id = "totalPricenew_5"></p>
+                                
+                                <button  class = "book">Confirm</button>
+                            </div>
+                            <button type = "button" class="fas fa-xmark close-button_5" ></button>
+                        </dialog>
 
                         <div class="legends"> <p>Available</p></div>
                         <div class="legends selected"> <p>Selected</p></div>
@@ -858,8 +966,7 @@
 
                     
 
-                    <div class = "seat"> Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
-                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha
+                    <div class = "seat">
                         <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox_6">
                         <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox_6">
                         <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox_6">
@@ -952,8 +1059,27 @@
                         <p>Tickets:</p><p id = "selectedId_6"></p><br>
                         <p>Cinema Room:</p> <p class = "selectedRoom_6"></p><br>
                         <p>Seats  :</p><br>
-                        <p>Total  : (price)</p>
-                        <button>Book</button>
+                        <p>Total  :</p><p id = "totalPrice_6"></p>
+
+
+                        <button type = "button" class = "book open-button_6">Book</button>
+                        
+                        
+                        <dialog  class = "modal" id="modal_6">
+                            <div class="modal_container">
+                                <h3>Reciept</h3>
+                                <hr>
+                                <p>Movie  :  </p><br>
+                                <p>Time   :</p><p class = "selectedSlotnew_6"></p><br>
+                                <p>Tickets:</p><p id = "selectedIdnew_6"></p><br>
+                                <p>Cinema Room:</p> <p class = "selectedRoomnew_6"></p><br>
+                                <p>Seats  :</p><br>
+                                <p>Total  : </p><p id = "totalPricenew_6"></p>
+                                
+                                <button  class = "book">Confirm</button>
+                            </div>
+                            <button type = "button" class="fas fa-xmark close-button_6" ></button>
+                        </dialog>
 
                         <div class="legends"> <p>Available</p></div>
                         <div class="legends selected"> <p>Selected</p></div>
@@ -996,8 +1122,7 @@
 
                     
 
-                    <div class = "seat"> Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
-                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha
+                    <div class = "seat">
                         <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox_7">
                         <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox_7">
                         <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox_7">
@@ -1090,8 +1215,27 @@
                         <p>Tickets:</p><p id = "selectedId_7"></p><br>
                         <p>Cinema Room:</p> <p class = "selectedRoom_7"></p><br>
                         <p>Seats  :</p><br>
-                        <p>Total  : (price)</p>
-                        <button>Book</button>
+                        <p>Total  :</p><p id = "totalPrice_7"></p>
+
+
+                        <button type = "button" class = "book open-button_7">Book</button>
+                        
+                        
+                        <dialog  class = "modal" id="modal_7">
+                            <div class="modal_container">
+                                <h3>Reciept</h3>
+                                <hr>
+                                <p>Movie  :  </p><br>
+                                <p>Time   :</p><p class = "selectedSlotnew_7"></p><br>
+                                <p>Tickets:</p><p id = "selectedIdnew_7"></p><br>
+                                <p>Cinema Room:</p> <p class = "selectedRoomnew_7"></p><br>
+                                <p>Seats  :</p><br>
+                                <p>Total  : </p><p id = "totalPricenew_7"></p>
+                                
+                                <button  class = "book">Confirm</button>
+                            </div>
+                            <button type = "button" class="fas fa-xmark close-button_7" ></button>
+                        </dialog>
 
                         <div class="legends"> <p>Available</p></div>
                         <div class="legends selected"> <p>Selected</p></div>
@@ -1134,8 +1278,7 @@
 
                     
 
-                    <div class = "seat"> Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
-                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha
+                    <div class = "seat"> 
                         <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox_8">
                         <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox_8">
                         <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox_8">
@@ -1228,8 +1371,27 @@
                         <p>Tickets:</p><p id = "selectedId_8"></p><br>
                         <p>Cinema Room:</p> <p class = "selectedRoom_8"></p><br>
                         <p>Seats  :</p><br>
-                        <p>Total  : (price)</p>
-                        <button>Book</button>
+                        <p>Total  :</p><p id = "totalPrice_8"></p>
+
+
+                        <button type = "button" class = "book open-button_8">Book</button>
+                        
+                        
+                        <dialog  class = "modal" id="modal_8">
+                            <div class="modal_container">
+                                <h3>Reciept</h3>
+                                <hr>
+                                <p>Movie  :  </p><br>
+                                <p>Time   :</p><p class = "selectedSlotnew_8"></p><br>
+                                <p>Tickets:</p><p id = "selectedIdnew_8"></p><br>
+                                <p>Cinema Room:</p> <p class = "selectedRoomnew_8"></p><br>
+                                <p>Seats  :</p><br>
+                                <p>Total  : </p><p id = "totalPricenew_8"></p>
+                                
+                                <button  class = "book">Confirm</button>
+                            </div>
+                            <button type = "button" class="fas fa-xmark close-button_8" ></button>
+                        </dialog>
 
                         <div class="legends"> <p>Available</p></div>
                         <div class="legends selected"> <p>Selected</p></div>
@@ -1272,8 +1434,7 @@
 
                     
 
-                    <div class = "seat"> Palitan nalang values ng seats thanks so much, pwede niyo loop if ever-->
-                        <!--Although wag niyo na palitan yung css if weird tignan pag hindi complete yung seats(hindi pantay ganon), ganon talaga wahahhaha
+                    <div class = "seat">
                         <input type="checkbox" name = "seat" value = "seat-1" class = "checkbox_9">
                         <input type="checkbox" name = "seat" value = "seat-2" class = "checkbox_9">
                         <input type="checkbox" name = "seat" value = "seat-3" class = "checkbox_9">
@@ -1366,8 +1527,27 @@
                         <p>Tickets:</p><p id = "selectedId_9"></p><br>
                         <p>Cinema Room:</p> <p class = "selectedRoom_9"></p><br>
                         <p>Seats  :</p><br>
-                        <p>Total  : (price)</p>
-                        <button>Book</button>
+                        <p>Total  :</p><p id = "totalPrice_9"></p>
+
+
+                        <button type = "button" class = "book open-button_9">Book</button>
+                        
+                        
+                        <dialog  class = "modal" id="modal_9">
+                            <div class="modal_container">
+                                <h3>Reciept</h3>
+                                <hr>
+                                <p>Movie  :  </p><br>
+                                <p>Time   :</p><p class = "selectedSlotnew_9"></p><br>
+                                <p>Tickets:</p><p id = "selectedIdnew_9"></p><br>
+                                <p>Cinema Room:</p> <p class = "selectedRoomnew_9"></p><br>
+                                <p>Seats  :</p><br>
+                                <p>Total  : </p><p id = "totalPricenew_9"></p>
+                                
+                                <button  class = "book">Confirm</button>
+                            </div>
+                            <button type = "button" class="fas fa-xmark close-button_9" ></button>
+                        </dialog>
 
                         <div class="legends"> <p>Available</p></div>
                         <div class="legends selected"> <p>Selected</p></div>
@@ -1376,7 +1556,7 @@
                 </form>
             </div>
         </div>
-    -->
+
         
         </div>
 
@@ -1386,5 +1566,21 @@
     <script src="pop_up_logic.js"></script>
     <script src="update_select_item.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        function rotate() {
+            var lastChild = $('.slider div:last-child').clone();
+            /*$('#test').html(lastChild)*/
+            $('.slider div').removeClass('firstSlide')
+            $('.slider div:last-child').remove();
+            $('.slider').prepend(lastChild)
+            $(lastChild).addClass('firstSlide')
+        }
+
+        window.setInterval(function () {
+            rotate()
+        }, 4000);
+
+    </script>
 </body>
 </html>
