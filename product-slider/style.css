@@ -1,5 +1,6 @@
 /* HEADER */
 
+
 * {
   margin: 0;
   padding: 0;
@@ -192,7 +193,7 @@ button:hover {
   display: none;
 }
 
-.product-card {
+.product_card {
   flex: 0 0 auto;
   width: 250px;
   height: 450px;
@@ -205,12 +206,14 @@ button:hover {
   height: 350px;
   border-radius: 15px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .product-thumb {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
 }
 
 .product-timer {
@@ -337,3 +340,335 @@ opacity: 0;
   grid-column: span 2;
   margin-bottom: 10px;
 }
+
+
+/*Seats*/
+.seat{
+  padding:0px;
+  position: relative;
+  left:20px;
+  bottom:0px;
+}
+
+.seat_2{
+  position: relative;
+  left:190px;
+  bottom:300px;
+}
+
+
+input[type = "checkbox"]{
+  content:"";
+  appearance: none;
+  background-color: #DADADA;
+  border-radius:20%;
+  padding:15px;
+  margin:2px;
+
+}
+
+input[type = "checkbox"]:hover{
+  background-color: #B8B8B8;
+  cursor:pointer;
+}
+
+input[type = "checkbox"]:checked{
+  background-color: #84CA79;
+}
+
+
+
+
+
+
+
+
+
+
+/*movies*/
+.movie-preview{
+  position:fixed;
+  top:0; left:0;
+  min-height: 100vh;
+  width: 100%;
+  background:rgba(0, 0, 0, .8);
+  display:none;
+  align-items: center;
+  justify-content:center;
+}
+
+.movie-preview .fa-xmark{
+  position: absolute;
+  top: 1rem; right: 1.5rem;
+  cursor: pointer;
+  color: #0D0F0A;
+  font-size: 2rem;
+}
+
+.movie-preview .fa-xmark:hover {
+  transform: rotate(90deg);
+  transition : .5s;
+  color:#dd3939;
+}
+
+.movie-preview .preview{
+  display:none;
+  padding:3rem;
+  background: #fff;
+  position: absolute;
+  margin: 2rem;
+  width:55rem;
+  height:30rem;
+  border-radius: 30px;
+
+}
+
+.movie-preview .preview select{
+  font-size: 1em;
+  padding: 7px;
+  border-radius: 17px;
+  border: #DADADA;
+  border-width: 10px;
+  background: #DADADA;
+  font-size: 15px; 
+  font-weight: 400;
+  font-family: 'Jost';
+  cursor:pointer;
+}
+
+
+
+.movie-preview .preview .room_select{
+
+  position:relative;
+  padding:10px;
+  left:8px;
+  bottom:0px;
+}
+
+.movie-preview .preview.active{
+  display:inline-block;
+  
+}
+
+
+.movie-preview .preview .preview_img_container{
+  position: relative;
+  
+  height:480px;
+  width:250px;
+  border-radius: 17px;
+  background-color: #000000;
+}
+
+.movie-preview .preview .preview_img_container .preview_gradient{
+  height: 350px;
+  width:250px;
+  top:90px;
+  background: linear-gradient(rgba(255, 255, 255, 0) 0%, #000000 70%);
+  position:absolute;
+}
+
+
+.movie-preview .preview .preview_img_container img{
+  position: relative;
+  height:350px;
+  width:250px;
+  border-radius: 17px;
+  display:inline-block;
+}
+
+.movie-preview .preview .form_container{
+  position: relative;
+  padding: 10px;
+  left:270px;
+  bottom: 480px;
+  height:460px;
+  width:590px;
+  background-color: #0D0F0A;
+  border-radius: 17px;
+}
+
+.movie-preview .preview .form_container .screen_container{
+  position:relative;
+  left:9px;
+  margin:12px;
+  height:70px;
+  width:315px;
+  background-color: #BDCCFF;
+  border-radius: 17px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 15px; 
+  font-weight: 400;
+  font-family: 'Jost';
+}
+
+.movie-preview .preview .form_container .dash_line{
+  width:2px;
+  height:480px;
+  position: absolute;
+  top:0px;
+  left:370px;
+  border-right:1px dashed #8c8b8b;
+  font-size: 15px; 
+  font-weight: 400;
+  font-family: 'Jost';
+}
+
+.movie-preview .preview .form_container .dash_line.two{
+  height:410px;
+  left:330px;
+}
+
+.movie-preview .preview .form_container .ticket_container{
+  position:absolute;
+  top:27px;
+  left:415px;
+  font-size: 15px; 
+  font-weight: 200;
+  font-family: 'Jost';
+  color:#ffffff;
+}
+
+.movie-preview .preview .form_container .ticket_container hr{
+  width:180px;
+  position: relative;
+  right:22px;
+  margin: 5px;
+  margin-bottom:30px;
+}
+
+.movie-preview .preview .form_container .ticket_container p{
+  position: relative;
+  display:inline-block;
+  margin:3px;
+  right:25px;
+  font-weight: 200;
+  font-family: 'Jost';
+}
+
+.movie-preview .preview .form_container .ticket_container .book{
+  background-color: #84CA79;
+  border: none;
+  color: white;
+  padding: 10px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-weight: 400;
+  font-family: 'Jost';
+  border-radius: 17px;
+}
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  height:500px;
+  width:500px;
+  border-color: #ffffff;
+  background-color: #ffffff;
+  border-radius: 30px;
+
+}
+
+.modal::backdrop{
+  background:rgba(0, 0, 0, .8);
+}
+
+
+
+.modal .modal_container{
+
+  position: relative;
+  background-color: #0D0F0A;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  top: 50%;
+  left:50%;
+  height:450px;
+  width:450px;
+
+}
+
+.modal .modal_container h3{
+  text-align: center;
+  position: relative;
+  top: 9%;
+  font-size: 25px;
+  color:#ffffff;
+  font-weight: 600;
+}
+
+.modal .modal_container hr{
+  
+  position: relative;
+  top:11%;
+  left:29%;
+}
+
+.modal .modal_container p{
+  padding: 8px;
+  color: #ffffff;
+  text-align: left;
+  top: 30px;
+  left:120px;
+}
+.modal .modal_container button{
+  position: absolute;
+  bottom:30px;
+  right:140px;
+}
+
+.modal  .fa-xmark{
+  font-size: 25px;
+  top:10px;
+  right:13px;
+  
+}
+
+
+
+
+
+
+
+
+/*legends*/
+.movie-preview .preview .form_container .ticket_container .legends{
+  position: relative;
+  height:30px;
+  width:30px;
+  top:8px;
+  background-color: #DADADA;
+  text-align: left;
+  border-radius: 7px;
+  margin:14px 4px 0px;
+}
+
+.movie-preview .preview .form_container .ticket_container .legends.selected{
+  background-color: #84CA79;
+}
+.movie-preview .preview .form_container .ticket_container .legends.sold{
+  background-color: #dd3939;
+}
+.movie-preview .preview .form_container .ticket_container .legends p{
+  position: absolute;
+  left:30px;
+  top:-1px;
+  font-weight: 300;
+  font-family: 'Jost';
+  font-size: 14px;
+}
+
+.movie-preview .preview .form_container .ticket_container .reciept_container{
+
+}
+
+
+
