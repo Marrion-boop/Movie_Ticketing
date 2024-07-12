@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -189,7 +190,7 @@
                             <option value="<?php echo $i?>" >Cinema Room <?php echo $i?></option><?php }?>
                         </select>
                         
-                        <select id="time_slot_<?php echo $movienum?>">
+                        <select id="time_slot_<?php echo $movienum?>" name="time_slot">
                             <option value="">Choose Time Slot</option>
                             <?php for($i=1 ; $i<5;$i++){?>
                             <option value="<?php echo $i?>:00pm"><?php echo $i?>:00pm</option><?php }?>
@@ -294,7 +295,26 @@
                                 <p>Cinema Room:</p> <p class = "selectedRoomnew_<?php echo $movienum?>"></p><br>
                                 <p>Seats  :</p><p id = "seatnew_<?php echo $movienum?>"></p><br>
                                 <p>Total  : </p><p id = "totalPricenew_<?php echo $movienum?>"></p>
-                                
+                                <input type="hidden" name="movie" value="<?php
+                    switch($movienum){
+                        case 1: echo"Frozen 2";
+                            break;
+                        case 2: echo"Ready Player One";
+                            break;
+                        case 3: echo"King Kong";
+                            break;    
+                        case 4: echo"Spy X Family";
+                            break;
+                        case 5: echo"Transformers";
+                            break;
+                        case 6: echo"Jurassic Park";
+                            break;
+                        case 7: echo"Rango ";
+                            break;    
+                        case 8: echo"Ted ";
+                            break;
+                        case 9: echo"Cars 3";
+                            break;}?>">
                                 <button  class = "book">Confirm</button>
                             </div>
                             <button type = "button" class="fas fa-xmark close-button_<?php echo $movienum?>" ></button>
