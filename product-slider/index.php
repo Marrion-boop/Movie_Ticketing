@@ -189,7 +189,7 @@
                             <option value="<?php echo $i?>" >Cinema Room <?php echo $i?></option><?php }?>
                         </select>
                         
-                        <select id="time_slot_<?php echo $movienum?>">
+                        <select id="time_slot_<?php echo $movienum?>" name="time_slot">
                             <option value="">Choose Time Slot</option>
                             <?php for($i=1 ; $i<5;$i++){?>
                             <option value="<?php echo $i?>:00pm"><?php echo $i?>:00pm</option><?php }?>
