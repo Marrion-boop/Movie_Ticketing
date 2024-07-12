@@ -14,6 +14,8 @@
 </head>
 
 <body>
+
+
     <div class="banner">
         <div class="navbar">
             <img src="./images/Vector.png" alt="" class="logo">
@@ -179,7 +181,7 @@
             </div>
             
             <div class="form_container">
-                <form>
+                <form action = "action.php" method = "get">
                     <div class = "room_select">
                         <select name = "cinema_room" id="cinema_room_<?php echo $movienum?>" >
                             <option value="">Choose Cinema Room</option>
@@ -205,10 +207,10 @@
                         <?php
                         $seatletter="ABCDEFGH";
                         for($i=0;$i<8;$i++){?>
-                        <input type="checkbox" name = "seat" value = "<?php echo $seatletter[$i]?>-1" class = "checkbox_<?php echo $movienum?>">
-                        <input type="checkbox" name = "seat" value = "<?php echo $seatletter[$i]?>-2" class = "checkbox_<?php echo $movienum?>">
-                        <input type="checkbox" name = "seat" value = "<?php echo $seatletter[$i]?>-3" class = "checkbox_<?php echo $movienum?>">
-                        <input type="checkbox" name = "seat" value = "<?php echo $seatletter[$i]?>-4" class = "checkbox_<?php echo $movienum?>">
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-2" class = "checkbox_<?php echo $movienum?>">
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-3" class = "checkbox_<?php echo $movienum?>">
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-1" class = "checkbox_<?php echo $movienum?>">
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-4" class = "checkbox_<?php echo $movienum?>">
                         <br><?php }?>
                         
                     </div>
@@ -217,10 +219,10 @@
                     <?php
                         $seatletter2="IJKLMNOP";
                         for($i=0;$i<8;$i++){?>
-                        <input type="checkbox" name = "seat" value = "<?php echo $seatletter2[$i]?>-1" class = "checkbox_<?php echo $movienum?>">
-                        <input type="checkbox" name = "seat" value = "<?php echo $seatletter2[$i]?>-2" class = "checkbox_<?php echo $movienum?>">
-                        <input type="checkbox" name = "seat" value = "<?php echo $seatletter2[$i]?>-3" class = "checkbox_<?php echo $movienum?>">
-                        <input type="checkbox" name = "seat" value = "<?php echo $seatletter2[$i]?>-4" class = "checkbox_<?php echo $movienum?>">
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter2[$i]?>-1" class = "checkbox_<?php echo $movienum?>">
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter2[$i]?>-2" class = "checkbox_<?php echo $movienum?>">
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter2[$i]?>-3" class = "checkbox_<?php echo $movienum?>">
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter2[$i]?>-4" class = "checkbox_<?php echo $movienum?>">
                         <br><?php }?>
                         
                     </div>
