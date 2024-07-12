@@ -207,9 +207,9 @@
                         <?php
                         $seatletter="ABCDEFGH";
                         for($i=0;$i<8;$i++){?>
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-1" class = "checkbox_<?php echo $movienum?>">
                         <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-2" class = "checkbox_<?php echo $movienum?>">
                         <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-3" class = "checkbox_<?php echo $movienum?>">
-                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-1" class = "checkbox_<?php echo $movienum?>">
                         <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-4" class = "checkbox_<?php echo $movienum?>">
                         <br><?php }?>
                         
@@ -258,7 +258,7 @@
                         <p>Time   :</p><p class = "selectedSlot_<?php echo $movienum?>"></p><br>
                         <p>Tickets:</p><p id = "selectedId_<?php echo $movienum?>"></p><br>
                         <p>Cinema Room:</p> <p class = "selectedRoom_<?php echo $movienum?>"></p><br>
-                        <p>Seats  :</p><br> <!--This is seat codes ex. A-1-->
+                        <p>Seats  :</p><p id = "seat_<?php echo $movienum?>"></p><br> <!--This is seat codes ex. A-1-->
                         <p>Total  :</p><p id = "totalPrice_<?php echo $movienum?>"></p>
 
                         <button type = "button" class = "book open-button_<?php echo $movienum?>">Book</button>
@@ -292,7 +292,7 @@
                                 <p>Time   :</p><p class = "selectedSlotnew_<?php echo $movienum?>"></p><br>
                                 <p>Tickets:</p><p id = "selectedIdnew_<?php echo $movienum?>"></p><br>
                                 <p>Cinema Room:</p> <p class = "selectedRoomnew_<?php echo $movienum?>"></p><br>
-                                <p>Seats  :<p></p></p><br>
+                                <p>Seats  :</p><p id = "seatnew_<?php echo $movienum?>"></p><br>
                                 <p>Total  : </p><p id = "totalPricenew_<?php echo $movienum?>"></p>
                                 
                                 <button  class = "book">Confirm</button>

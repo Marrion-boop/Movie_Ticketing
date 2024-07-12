@@ -42,19 +42,25 @@ selectedTime_1.addEventListener('change', function (e) {
 
 var checkboxes_1 = document.querySelectorAll('.checkbox_1');
 var count_1 = 0;
+let result_1 = [];
 for(var i = 0; i<checkboxes_1.length; i++) {
+    let wat = checkboxes_1[i].getAttribute("value");
     checkboxes_1[i]. addEventListener('click', function() {
         if(this.checked == true) {
             count_1++;
+            result_1.push(wat);
         }
         else
         {
+            result_1.pop(wat);
             count_1--;
         }
         document.getElementById('selectedId_1').innerHTML = count_1;
         document.getElementById('selectedIdnew_1').innerHTML = count_1;
         document.getElementById('totalPrice_1').innerHTML = count_1 * 350;
         document.getElementById('totalPricenew_1').innerHTML = count_1 * 350;
+        document.getElementById('seat_1').innerHTML =result_1.join(" ,");
+        document.getElementById('seatnew_1').innerHTML =result_1.join(" ,");
     })
 }
 
@@ -113,19 +119,25 @@ selectedTime_2.addEventListener('change', function (e) {
 
 var checkboxes_2 = document.querySelectorAll('.checkbox_2');
 var count_2 = 0;
+let result_2 = [];
 for(var i = 0; i<checkboxes_2.length; i++) {
+    let wat = checkboxes_2[i].getAttribute("value");
     checkboxes_2[i]. addEventListener('click', function() {
         if(this.checked == true) {
             count_2++;
+            result_2.push(wat);
         }
         else
         {
+            result_2.pop(wat);
             count_2--;
         }
         document.getElementById('selectedId_2').innerHTML = count_2;
         document.getElementById('selectedIdnew_2').innerHTML = count_2;
         document.getElementById('totalPrice_2').innerHTML = count_2 * 350;
         document.getElementById('totalPricenew_2').innerHTML = count_2 * 350;
+        document.getElementById('seat_2').innerHTML =result_2.join(" ,");
+        document.getElementById('seatnew_2').innerHTML =result_2.join(" ,");
     })
 }
 
@@ -182,19 +194,25 @@ selectedTime_3.addEventListener('change', function (e) {
 
 var checkboxes_3 = document.querySelectorAll('.checkbox_3');
 var count_3 = 0;
+let result_3 = [];
 for(var i = 0; i<checkboxes_3.length; i++) {
+    let wat = checkboxes_3[i].getAttribute("value");
     checkboxes_3[i]. addEventListener('click', function() {
         if(this.checked == true) {
             count_3++;
+            result_3.push(wat);
         }
         else
         {
             count_3--;
+            result_3.pop(wat);
         }
         document.getElementById('selectedId_3').innerHTML = count_3;
         document.getElementById('selectedIdnew_3').innerHTML = count_3;
         document.getElementById('totalPrice_3').innerHTML = count_3 * 350;
         document.getElementById('totalPricenew_3').innerHTML = count_3 * 350;
+        document.getElementById('seat_3').innerHTML =result_3.join(" ,");
+        document.getElementById('seatnew_3').innerHTML =result_3.join(" ,");
     })
 }
 
@@ -251,19 +269,26 @@ selectedTime_4.addEventListener('change', function (e) {
 
 var checkboxes_4 = document.querySelectorAll('.checkbox_4');
 var count_4 = 0;
+let result_4 = [];
 for(var i = 0; i<checkboxes_4.length; i++) {
+    let wat = checkboxes_4[i].getAttribute("value");
     checkboxes_4[i]. addEventListener('click', function() {
         if(this.checked == true) {
             count_4++;
+            result_4.push(wat);
+
         }
         else
         {
+            result_4.pop(wat);
             count_4--;
         }
         document.getElementById('selectedId_4').innerHTML = count_4;
         document.getElementById('selectedIdnew_4').innerHTML = count_4;
         document.getElementById('totalPrice_4').innerHTML = count_4 * 350;
         document.getElementById('totalPricenew_4').innerHTML = count_4 * 350;
+        document.getElementById('seat_4').innerHTML =result_4.join(" ,");
+        document.getElementById('seatnew_4').innerHTML =result_4.join(" ,");
     })
 }
 
@@ -320,19 +345,25 @@ selectedTime_5.addEventListener('change', function (e) {
 
 var checkboxes_5 = document.querySelectorAll('.checkbox_5');
 var count_5 = 0;
+let result_5 = [];
 for(var i = 0; i<checkboxes_5.length; i++) {
+    let wat = checkboxes_5[i].getAttribute("value");
     checkboxes_5[i]. addEventListener('click', function() {
         if(this.checked == true) {
             count_5++;
+            result_5.push(wat);
         }
         else
         {
+            result_5.pop(wat);
             count_5--;
         }
         document.getElementById('selectedId_5').innerHTML = count_5;
         document.getElementById('selectedIdnew_5').innerHTML = count_5;
         document.getElementById('totalPrice_5').innerHTML = count_5 * 350;
         document.getElementById('totalPricenew_5').innerHTML = count_5 * 350;
+        document.getElementById('seat_5').innerHTML =result_5.join(" ,");
+        document.getElementById('seatnew_5').innerHTML =result_5.join(" ,");
     })
 }
 
@@ -389,19 +420,25 @@ selectedTime_6.addEventListener('change', function (e) {
 
 var checkboxes_6 = document.querySelectorAll('.checkbox_6');
 var count_6 = 0;
+let result_6 = [];
 for(var i = 0; i<checkboxes_6.length; i++) {
+    let wat = checkboxes_6[i].getAttribute("value");
     checkboxes_6[i]. addEventListener('click', function() {
         if(this.checked == true) {
             count_6++;
+            result_6.push(wat);
         }
         else
         {
+            result_6.pop(wat);
             count_6--;
         }
         document.getElementById('selectedId_6').innerHTML = count_6;
         document.getElementById('selectedIdnew_6').innerHTML = count_6;
         document.getElementById('totalPrice_6').innerHTML = count_6 * 350;
         document.getElementById('totalPricenew_6').innerHTML = count_6 * 350;
+        document.getElementById('seat_6').innerHTML =result_6.join(" ,");
+        document.getElementById('seatnew_6').innerHTML =result_6.join(" ,");
     })
 }
 
@@ -458,19 +495,28 @@ selectedTime_7.addEventListener('change', function (e) {
 
 var checkboxes_7 = document.querySelectorAll('.checkbox_7');
 var count_7 = 0;
+let result_7 = [];
+
 for(var i = 0; i<checkboxes_7.length; i++) {
+    let wat = checkboxes_7[i].getAttribute("value");
     checkboxes_7[i]. addEventListener('click', function() {
         if(this.checked == true) {
             count_7++;
+            result_7.push(wat);
+
         }
         else
         {
+            result_7.pop(wat);
+
             count_7--;
         }
         document.getElementById('selectedId_7').innerHTML = count_7;
         document.getElementById('selectedIdnew_7').innerHTML = count_7;
         document.getElementById('totalPrice_7').innerHTML = count_7 * 350;
         document.getElementById('totalPricenew_7').innerHTML = count_7 * 350;
+        document.getElementById('seat_7').innerHTML =result_7.join(" ,");
+        document.getElementById('seatnew_7').innerHTML =result_7.join(" ,");
     })
 }
 
@@ -528,19 +574,28 @@ selectedTime_8.addEventListener('change', function (e) {
 
 var checkboxes_8 = document.querySelectorAll('.checkbox_8');
 var count_8 = 0;
+let result_8 = [];
+
 for(var i = 0; i<checkboxes_8.length; i++) {
+    let wat = checkboxes_8[i].getAttribute("value");
     checkboxes_8[i]. addEventListener('click', function() {
         if(this.checked == true) {
             count_8++;
+            result_8.push(wat);
+
         }
         else
         {
             count_8--;
+            result_8.pop(wat);
+
         }
         document.getElementById('selectedId_8').innerHTML = count_8;
         document.getElementById('selectedIdnew_8').innerHTML = count_8;
         document.getElementById('totalPrice_8').innerHTML = count_8 * 350;
         document.getElementById('totalPricenew_8').innerHTML = count_8 * 350;
+        document.getElementById('seat_8').innerHTML =result_8.join(" ,");
+        document.getElementById('seatnew_8').innerHTML =result_8.join(" ,");
     })
 }
 
@@ -597,19 +652,28 @@ selectedTime_9.addEventListener('change', function (e) {
 
 var checkboxes_9 = document.querySelectorAll('.checkbox_9');
 var count_9 = 0;
+let result_9 = [];
+
 for(var i = 0; i<checkboxes_9.length; i++) {
+    let wat = checkboxes_9[i].getAttribute("value");
     checkboxes_9[i]. addEventListener('click', function() {
         if(this.checked == true) {
             count_9++;
+            result_9.push(wat);
+
         }
         else
         {
             count_9--;
+            result_9.pop(wat);
+
         }
         document.getElementById('selectedId_9').innerHTML = count_9;
         document.getElementById('selectedIdnew_9').innerHTML = count_9;
         document.getElementById('totalPrice_9').innerHTML = count_9 * 350;
         document.getElementById('totalPricenew_9').innerHTML = count_9 * 350;
+        document.getElementById('seat_9').innerHTML =result_9.join(" ,");
+        document.getElementById('seatnew_9').innerHTML =result_9.join(" ,");
     })
 }
 
