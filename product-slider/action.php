@@ -1,6 +1,9 @@
 <?php
+session_start();
 
+include("DBCRET.php");
 include("DBQUERYCALLS.php");
+
 $name = $_GET['seat'];
 $count =0;
 
