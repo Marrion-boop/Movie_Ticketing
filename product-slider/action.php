@@ -62,4 +62,6 @@ if (isset($_GET['movie'])) {
         echo $_SESSION['room_seats'][$i];
         
     }
+
+getseat();
 ?>

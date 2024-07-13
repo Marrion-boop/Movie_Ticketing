@@ -182,7 +182,7 @@
             </div>
             
             <div class="form_container">
-                <form action = "action.php" method = "get" id = "form">
+                <form action = "action.php" method = "get" id = "form_<?php echo $movienum?>">
                     <div class = "room_select">
                         <select name = "cinema_room" id="cinema_room_<?php echo $movienum?>">
                             <option value="">Choose Cinema Room</option>
@@ -262,7 +262,7 @@
                         <p>Seats  :</p><p id = "seat_<?php echo $movienum?>"></p><br> <!--This is seat codes ex. A-1-->
                         <p>Total  :</p><p id = "totalPrice_<?php echo $movienum?>"></p>
 
-                        <button type = "button" class = "book open-button_<?php echo $movienum?>" id = "book_1" >Book</button>
+                        <button type = "button" class = "book open-button_<?php echo $movienum?>" id = "book_<?php echo $movienum?>" >Book</button>
                         
                         <dialog  class = "modal" id="modal_<?php echo $movienum?>">
                             <div class="modal_container">
@@ -290,9 +290,9 @@
                             break;
 
                                  }?>  </p><br>
-                                <p>Time   :</p><p class = "selectedSlotnew_<?php echo $movienum?>"></p><p id = "error_time"></p><br>
-                                <p>Tickets:</p><p id = "selectedIdnew_<?php echo $movienum?>"></p><p id = "error_ticket"></p><br>
-                                <p>Cinema Room:</p> <p class = "selectedRoomnew_<?php echo $movienum?>"></p><p id = "error_cinema"></p><br>
+                                <p>Time   :</p><p class = "selectedSlotnew_<?php echo $movienum?>"></p><p id = "error_time_<?php echo $movienum?>"></p><br>
+                                <p>Tickets:</p><p id = "selectedIdnew_<?php echo $movienum?>"></p><p id = "error_ticket_<?php echo $movienum?>"></p><br>
+                                <p>Cinema Room:</p> <p class = "selectedRoomnew_<?php echo $movienum?>"></p><p id = "error_cinema_<?php echo $movienum?>"></p><br>
                                 <p>Seats  :</p><p id = "seatnew_<?php echo $movienum?>"></p><br>
                                 <p>Total  : </p><p id = "totalPricenew_<?php echo $movienum?>"></p>
                                 <input type="hidden" name="movie" value="<?php
@@ -348,6 +348,7 @@
 
 
     </div>
+    <script src="disable_checkbox.js"></script>
     <script src="form_validation.js"></script>
     <script src="pay_pop_up_logic.js"></script>
     <script src="pop_up_logic.js"></script>
