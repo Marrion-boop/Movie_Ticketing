@@ -54,4 +54,12 @@ if (isset($_GET['movie'])) {
     $movie = $_GET['movie'];
 
     inserttoscreening($room, $movie, $time);
+    $_SESSION['room_seats']=[];
+    $_SESSION['room_seats']= getseat();
+   
+
+    for($i=0; $i<count($_SESSION['room_seats']);$i++){
+        echo $_SESSION['room_seats'][$i];
+        
+    }
 ?>
