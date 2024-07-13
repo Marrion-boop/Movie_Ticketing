@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include("DBQUERYCALLS.php");
 $name = $_GET['seat'];
 $count =0;

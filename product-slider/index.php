@@ -208,10 +208,10 @@
                         <?php
                         $seatletter="ABCDEFGH";
                         for($i=0;$i<8;$i++){?>
-                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-1" class = "checkbox_<?php echo $movienum?>">
-                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-2" class = "checkbox_<?php echo $movienum?>">
-                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-3" class = "checkbox_<?php echo $movienum?>">
-                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-4" class = "checkbox_<?php echo $movienum?>">
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-1" class = "checkbox_<?php echo $movienum?>" <?php getdisabled($seatletter[$i],1)?>>
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-2" class = "checkbox_<?php echo $movienum?>" <?php getdisabled($seatletter[$i],2)?>>
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-3" class = "checkbox_<?php echo $movienum?>" <?php getdisabled($seatletter[$i],3)?>>
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter[$i]?>-4" class = "checkbox_<?php echo $movienum?>" <?php getdisabled($seatletter[$i],4)?>>
                         <br><?php }?>
                         
                     </div>
@@ -219,11 +219,12 @@
                     <div class = "seat_2">
                     <?php
                         $seatletter2="IJKLMNOP";
-                        for($i=0;$i<8;$i++){?>
-                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter2[$i]?>-1" class = "checkbox_<?php echo $movienum?>">
-                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter2[$i]?>-2" class = "checkbox_<?php echo $movienum?>">
-                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter2[$i]?>-3" class = "checkbox_<?php echo $movienum?>">
-                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter2[$i]?>-4" class = "checkbox_<?php echo $movienum?>">
+                        for($i=0;$i<8;$i++){
+                            ?>
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter2[$i]?>-1" class = "checkbox_<?php echo $movienum?>" <?php getdisabled($seatletter2[$i],1)?>>
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter2[$i]?>-2" class = "checkbox_<?php echo $movienum?>" <?php getdisabled($seatletter2[$i],2)?>>
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter2[$i]?>-3" class = "checkbox_<?php echo $movienum?>" <?php getdisabled($seatletter2[$i],3)?>>
+                        <input type="checkbox" name = "seat[]" value = "<?php echo $seatletter2[$i]?>-4" class = "checkbox_<?php echo $movienum?>" <?php getdisabled($seatletter2[$i],4)?>>
                         <br><?php }?>
                         
                     </div>
@@ -371,3 +372,11 @@
     </script>
 </body>
 </html>
+
+<?php                        function getdisabled($letter,$num){
+                             if(isset($_SESSION['room_seats'])){
+                             if((array_search("$letter-$num",$_SESSION['room_seats']))){ echo"style=\"background-color: #dd3939\" disabled=\"disabled\"";}
+                             else if(array_search("$letter-$num",$_SESSION['room_seats'])===0){echo"style=\"background-color: #dd3939\" disabled=\"disabled\"";}
+                             else echo"";}}
+                             
+                             ?>
