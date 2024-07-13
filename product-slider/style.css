@@ -356,6 +356,13 @@ opacity: 0;
   bottom:300px;
 }
 
+input[type=checkbox][disabled] {
+  background-color: #dd3939;
+}
+input[type = "checkbox"]:hover:disabled{
+  background-color: #dd3939;
+  cursor: context-menu;
+}
 
 input[type = "checkbox"]{
   content:"";
@@ -375,6 +382,8 @@ input[type = "checkbox"]:hover{
 input[type = "checkbox"]:checked{
   background-color: #84CA79;
 }
+
+
 
 
 
