@@ -590,6 +590,7 @@ for(var i = 0; i<checkboxes_8.length; i++) {
             result_8.pop(wat);
 
         }
+
         document.getElementById('selectedId_8').innerHTML = count_8;
         document.getElementById('selectedIdnew_8').innerHTML = count_8;
         document.getElementById('totalPrice_8').innerHTML = count_8 * 350;

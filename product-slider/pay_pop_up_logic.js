@@ -2,14 +2,23 @@ let modal_1 = document.querySelector("#modal_1");
 let openModal_1 = document.querySelector(".open-button_1");
 let closeModal_1 = document.querySelector(".close-button_1");
 
-openModal_1.addEventListener("click", () => {
-  modal_1.showModal();
-});
 
-closeModal_1.addEventListener("click", () => {
-  modal_1.close();
-  
-});
+
+  openModal_1.addEventListener("click", () => {
+    modal_1.showModal();
+  });
+
+
+
+
+  closeModal_1.addEventListener("click", () => {
+    modal_1.close();
+    
+  });
+
+
+
+
 
 
 /*******************************************************************************************************************************/
